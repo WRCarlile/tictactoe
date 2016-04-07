@@ -1,3 +1,6 @@
-button {
+#invisibleButton {
   display: none;
+}
+#reset {
+  margin-top: 20px;
 }

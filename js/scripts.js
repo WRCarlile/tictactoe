@@ -2,6 +2,27 @@ function Board(totalArray) {
   this.totalArray = totalArray;
 }
 
+Board.prototype.winner= function() {
+console.log("inside the function");
+    if (this.totalArray[0]===this.totalArray[1] && this.totalArray[1]===this.totalArray[2]) {
+    return alert("Winner!");
+  } else if (this.totalArray[6] === this.totalArray[4] && this.totalArray[4]=== this.totalArray[2]) {
+    return alert("Winner!");
+  } else if (this.totalArray[3] === this.totalArray[4] && this.totalArray[4]=== this.totalArray[5]){
+    return alert("Winner!");
+  } else if (this.totalArray[6] === this.totalArray[7] && this.totalArray[7]=== this.totalArray[8]){
+    return alert("Winner!");
+  } else if (this.totalArray[0] === this.totalArray[3] && this.totalArray[3]=== this.totalArray[6]){
+    return alert("Winner!");
+  } else if (this.totalArray[1] === this.totalArray[4] && this.totalArray[4]=== this.totalArray[7]){
+    return alert("Winner!");
+  } else if (this.totalArray[2] === this.totalArray[5] && this.totalArray[5]=== this.totalArray[8]){
+    return alert("Winner!");
+  } else if (this.totalArray[0] === this.totalArray[4] && this.totalArray[4]=== this.totalArray[8]){
+    return alert("Winner!");
+  }
+
+}
 
 // user logic
 
@@ -21,9 +42,10 @@ $(document).ready(function() {
     var boardArray = [inputNW,inputN,inputNE,inputW,inputCenter,inputE,inputSW,inputS,inputSE];
     var newBoard =  new Board(boardArray);
 
-
-
-    console.log(newBoard);
+//     if (newBoard.boardArray[0] === newBoard.boardArray[1] === newboard.boardArray[2]) {
+//       alert("winner");
+// }
+    console.log(newBoard.winner());
   });
 });
 
