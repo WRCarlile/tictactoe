@@ -1,28 +1,63 @@
+
+// BUSINESS LOGIC
 function Board(totalArray) {
   this.totalArray = totalArray;
 }
 
 Board.prototype.winner= function() {
 console.log("inside the function");
-    if (this.totalArray[0]===this.totalArray[1] && this.totalArray[1]===this.totalArray[2]) {
-    return alert("Winner!");
-  } else if (this.totalArray[6] === this.totalArray[4] && this.totalArray[4]=== this.totalArray[2]) {
-    return alert("Winner!");
-  } else if (this.totalArray[3] === this.totalArray[4] && this.totalArray[4]=== this.totalArray[5]){
-    return alert("Winner!");
-  } else if (this.totalArray[6] === this.totalArray[7] && this.totalArray[7]=== this.totalArray[8]){
-    return alert("Winner!");
-  } else if (this.totalArray[0] === this.totalArray[3] && this.totalArray[3]=== this.totalArray[6]){
-    return alert("Winner!");
-  } else if (this.totalArray[1] === this.totalArray[4] && this.totalArray[4]=== this.totalArray[7]){
-    return alert("Winner!");
-  } else if (this.totalArray[2] === this.totalArray[5] && this.totalArray[5]=== this.totalArray[8]){
-    return alert("Winner!");
-  } else if (this.totalArray[0] === this.totalArray[4] && this.totalArray[4]=== this.totalArray[8]){
-    return alert("Winner!");
-  }
 
+
+  if (this.totalArray[0]=== "x" && this.totalArray[1]=== "x" && this.totalArray[2] === "x") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[0]=== "o" && this.totalArray[1]=== "o" && this.totalArray[2] === "o") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[3]=== "x" && this.totalArray[4]=== "x" && this.totalArray[5] === "x") {
+      return alert("Winner!");
+  }
+  else if(this.totalArray[3]=== "o" && this.totalArray[4]=== "o" && this.totalArray[5] === "o") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[6]=== "x" && this.totalArray[7]=== "x" && this.totalArray[8] === "x") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[6]=== "o" && this.totalArray[7]=== "o" && this.totalArray[8] === "o") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[0]=== "x" && this.totalArray[3]=== "x" && this.totalArray[6] === "x") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[0]=== "o" && this.totalArray[3]=== "o" && this.totalArray[6] === "o") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[1]=== "x" && this.totalArray[4]=== "x" && this.totalArray[7] === "x") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[1]=== "o" && this.totalArray[4]=== "o" && this.totalArray[7] === "o") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[2]=== "x" && this.totalArray[5]=== "x" && this.totalArray[8] === "x") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[2]=== "o" && this.totalArray[5]=== "o" && this.totalArray[8] === "o") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[0]=== "x" && this.totalArray[4]=== "x" && this.totalArray[8] === "x") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[0]=== "o" && this.totalArray[4]=== "o" && this.totalArray[8] === "o") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[6]=== "x" && this.totalArray[4]=== "x" && this.totalArray[2] === "x") {
+      return alert("Winner!");
+  }
+  else if (this.totalArray[6]=== "o" && this.totalArray[4]=== "o" && this.totalArray[2] === "o") {
+      return alert("Winner!");
+  }
 }
+// END BUSINESS LOGIC
 
 // user logic
 
